@@ -1,6 +1,6 @@
 const json = new XMLHttpRequest();
 
-json.open('GET', 'Movil.json', true);
+json.open('GET', '../data/Movil.json', true);
 
 json.onload = function () {
     //200:correcto 403:prohibido  404:no se encuentra
@@ -18,6 +18,7 @@ json.onload = function () {
                 <td>${Movil.Almacenamiento}</td>
                 <td>${Movil.Resolucion}</td>
                 <td>${Movil.Bateria}</td>
+                <td><img src="${Movil.Imagen}" width="60" height="60"></td>
             </tr>`;
         });
         document.getElementById('info').innerHTML = htmltemplate;
